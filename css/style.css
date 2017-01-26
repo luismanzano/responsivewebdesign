@@ -141,7 +141,7 @@ table {
 /* ******************************************
 	Web Fonts
 ****************************************** */
-/*
+
 @font-face {
     font-family: 'Roboto Condensed Light';
     src: url('../fonts/robotocondensed-light-webfont.eot');
@@ -152,6 +152,7 @@ table {
     font-weight: normal;
     font-style: normal;
 }
-*/
 
-
+body{
+	font-family: "Roboto Condensed Light", "Helvetica Neue", Helvetica, sans-serif;
+}
