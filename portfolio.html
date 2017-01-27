@@ -5,19 +5,41 @@
 		<title>Maya Chopra's portfolio</title>
 		<link rel="stylesheet" href="./css/style.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--[if lt IE 9]>
-	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<style type="text/css" media="all">
+		<style type="text/css" media="all">
 		#nav, #masthead, #content, #colophon{
 			margin: 0 18px;
+		}
+
+		#container-nav{
+			background: #fff;
+		}
+
+		#container-header{
+			background: #352a38;
+			height: 350px;
+			width: 100%;
+		}
+
+		#container-content{
+			padding: 24px 0;
+		}
+
+		#container-footer{
+			padding: 24px 0;
+			background: #352a38;
+			color: #eee;
+			font-weight: 100;
+		}
+
+		.box{
+			padding: 14px;
 		}
 </style>
 	</head>
 
 	<body lang="en">
 		<!--Add opening <section> tag below here-->
+		<div id="container-nav">
 <section id="nav">
 			<h3>Maya Chopra</h3>
 			<!--
@@ -34,6 +56,9 @@
 
 		<!--Add closing <section> tag above here-->
 		</section>
+		</div>
+
+		<div id="container-header">
 		<!--Add opening <header> tag below here-->
 		<header id="masthead">
 
@@ -43,7 +68,10 @@
 
 		<!--Add closing <header> tag above here-->
 		</header>
+		</div>
 		<!--Add opening <article> tag below here-->
+		<div id="container-content">
+
 <article id="content">
 
 			<!--Add opening <section> tag below here-->
@@ -84,12 +112,14 @@
 				<section>
 
 				<!--Add opening <header> tag below here-->
+<header>
 
 					<h3>My Resume</h3>
 
 					<p>Current/previous positions and skill set</p>
 
-				<!--Add closing <header> tag above here-->
+	</header>
+			<div class="box">
 				<h4>Currently</h4>
 
 				<h5>Designer/Developer</h5>
@@ -98,6 +128,9 @@
 
 				<p>Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith</p>
 
+		</div>
+
+		<div class="box">
 				<h4>Previously</h4>
 
 				<h5>Lead UI Designer</h5>
@@ -105,6 +138,10 @@
 				<h6>Aquent University</h6>
 
 				<p>Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.</p>
+
+			</div>
+
+			<div class="box">
 
 				<h4>Skills</h4>
 
@@ -114,7 +151,8 @@
 					<li>Responsive Web Design</li>
 					<li>Mobile App (Native and Web) Design</li>
 				</ul>
-				<!--Add opening <footer> tag below here-->
+
+			</div>
 <footer>
 				<p>For a full work history, have a look at my LinkedIn Profile</p>
 
@@ -124,11 +162,14 @@
 
 		</section>
 		</article>
-			<!--Add closing <article> tag above here-->
-		<!--Add opening <footer> tag below here-->
+
+</div>
+
+<div id="container-footer">
 <footer id="colophon">
 		<p>©2013 all rights reserved. Fill out a form here to get in touch.</p>
 </footer>
-		<!--Add closing <footer> tag above here-->
+
+</div>
 	</body>
 </html>
