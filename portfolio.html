@@ -43,6 +43,27 @@
 			max-width: 100%;
 		}
 
+		.box h4 {
+		    color: #999;
+		    border-top: 4px double #eee;
+		    border-bottom: 1px solid #eee;
+		    margin-bottom: .975em; /* 3/4 of 1.3 */
+		    text-align: center;
+		}
+
+		figure,
+		.box {
+		    background: #fff;
+		    -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+		    -webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+		    box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .1 );
+		    padding: .975em; /* 3/4 of 1.3 */
+		}
+
+		section footer {
+		    clear: both;
+		    }
+
 		@media screen and (min-width: 720px){
 
 		#portfolio article, #resume article{
@@ -60,6 +81,10 @@
 
 		.group {
 		    *zoom: 1; /* 3 */
+		    }
+
+		body {
+		    font-size: 107.692307692308%;
 		    }
 }
 		@media print and (max-width: 8.5in){
