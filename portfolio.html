@@ -29,7 +29,7 @@
 		}
 
 		#container-footer{
-			padding: 24px 0;
+			padding: 32px 0;
 			background: #352a38;
 			color: #eee;
 			font-weight: 100;
@@ -41,6 +41,11 @@
 
 		img{
 			max-width: 100%;
+		}
+
+		#portfolio article{
+			float: left;
+			width: 33%;
 		}
 
 		@media print and (max-width: 8.5in){
@@ -109,11 +114,7 @@
 		<div id="container-content">
 
 <article id="content">
-
-			<!--Add opening <section> tag below here-->
 <section id="portfolio">
-
-				<!--Add opening <header> tag below here-->
 <header>
 
 					<h3>My Portfolio</h3>
@@ -121,28 +122,29 @@
 					<p>Some of the things I've been working on lately</p>
 </header>
 				<!--Add closing <header> tag above here-->
+				<article>
 				<h4>Vitamin T Homepage</h4>
 					<!--Add opening <figure> tag below here-->
 					<figure>
 						<img src="./img/vitamin-t.png">
 					</figure>
+					</article>
 
-					<!--Add closing <figure> tag above here-->
+				<article>
 				<h4>RoboHead iPad App</h4>
 						<!--Add opening <figure> tag below here-->
 						<figure>
 								<img src="./img/robohead.png">
 						</figure>
+					</article>
 						<!--Add closing <figure> tag above here-->
+				<article>
 				<h4>Shareist Homepage</h4>
 						<!--Add opening <figure> tag below here-->
 						<figure>
 							<img src="./img/shareist.png">
 						</figure>
-						<!--Add closing <figure> tag above here-->
-
-				<!--Add closing <section> tag above here-->
-
+					</article>
 			</section>
 				<!--Add opening <section> tag below here-->
 				<section id="resume">
@@ -197,9 +199,9 @@
 			<!--Add closing <section> tag above here-->
 
 		</section>
-		</article>
+	</article>
+	</div>
 
-</div>
 
 <div id="container-footer">
 <footer id="colophon">
