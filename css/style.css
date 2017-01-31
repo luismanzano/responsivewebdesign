@@ -61,6 +61,13 @@ p, #resume li{
 	margin: .612em;
 }
 
+.wrapper {
+    padding: 0 .65em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6{
 	font-weight: 100;
 }
@@ -240,6 +247,13 @@ img{
 	max-width: 100%;
 }
 
+#nav,
+#masthead,
+#content,
+#colophon {
+	margin: 0 3.3%;
+}
+
 .box h4 {
 		color: #999;
 		border-top: 4px double #eee;
@@ -261,11 +275,21 @@ section footer {
 		clear: both;
 		}
 
-@media screen and (min-width: 720px){
+.ie .wrapper {
+		    *behavior: url("http://absolute-path.com/js/boxsizing.htc");
+		}
+
+		/* Clearfix */
+
+.group {
+		    *zoom: 1;
+		    }
+
+@media screen and (min-width: 45em){
 
 #portfolio article, #resume article{
 	float: left;
-	width: 33%;
+	width: 33.333%;
 }
 
 /* Float Clearing http://nicolasgallagher.com/micro-clearfix-hack */
@@ -283,7 +307,20 @@ section footer {
 body {
 		font-size: 107.692307692308%;
 		}
+
+#masthead{
+	max-width: 43em;
 }
+
+#nav,
+#masthead,
+#content,
+#colophon {
+	margin: 0 5.5%;
+}
+}
+
+
 @media print and (max-width: 8.5in){
 	#masthead {
 		color:black;
