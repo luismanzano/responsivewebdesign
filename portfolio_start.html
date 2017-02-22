@@ -15,53 +15,19 @@
 		<!-- Add media query support for IE8 and under. Must place media queries in external stylesheet -->
 		<script src="./js/respond.min.js"></script>
 		
+		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+		<script src="js/picturefill.js"></script>
+		<script src="js/matchmedia.js"></script>
+		
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 			
 	<style type="text/css" media="all">
 	
-	/********************************************
-	Fluid Media
-	********************************************/
 
-	figure {
-	    position: relative;
-	}
-
-	figure img,
-	figure object,
-	figure embed,
-	figure video {
-	    display: block;
-	    max-width: 100%; 
-	}
-
-	img {
-	    border: 0;
-	    -ms-interpolation-mode: bicubic;
-	}
-
-	/* 
-	interpolation-mode
-	http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
-	 */
-	
-	
-/* Creates hover effect on Portfolio images */
-	#portfolio figure:hover,
-	.box:hover {
-	    -moz-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-	    -webkit-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-	    box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-	}
-
-	/* Image Offset for Indication of Linked Content */
-
-	#portfolio figure:hover {
-	    bottom: .26em;
-	}
-					
+			
+		
 			
 	</style>
 	</head>
@@ -84,7 +50,17 @@
 		</div>
 		<div id="container-header">
 			<header id="masthead" class="wrapper">
-				
+				<figure id="maya"> 
+				    <div data-picture data-alt="Maya Chopra">
+				        <div data-src="img/headshot-s.png"></div>
+				        <div data-src="img/headshot-m.png" data-media="(min-width: 45em)"></div>
+				        <div data-src="img/headshot-l.png" data-media="(min-width: 60em)"></div>
+				        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+				        <noscript>
+				            <img src="./img/headshot-s.png" alt="Maya Chopra">
+				        </noscript>
+				    </div>
+				</figure>
 				
 				<h1>Hi, I'm Maya</h1>
 
