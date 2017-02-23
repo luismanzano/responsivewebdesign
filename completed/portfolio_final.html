@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><html><![endif]-->
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -16,117 +18,57 @@
 		<script src="./js/respond.min.js"></script>
 		
 		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
-		<script src="js/picturefill.js"></script>
-		<script src="js/matchmedia.js"></script>
+		<script src="./js/picturefill.js"></script>
+		<script src="./js/matchmedia.js"></script>
 		
 		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="./js/html5.js"></script>
 		<![endif]-->
 			
-	<style type="text/css" media="all">
-	
-	/********************************************
-	Fluid Media
-	********************************************/
+			<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+			<![endif]-->
 
-	figure {
-	    position: relative;
-	}
-
-	figure img,
-	figure object,
-	figure embed,
-	figure video {
-	    display: block;
-	    max-width: 100%; 
-	}
-
-	img {
-	    border: 0;
-	    -ms-interpolation-mode: bicubic;
-	}
-
-	/* 
-	interpolation-mode
-	http://css-tricks.com/ie-fix-bicubic-scaling-for-images/
-	 */
-	
-	
-/* Creates hover effect on Portfolio images */
-	#portfolio figure:hover,
-	.box:hover {
-	    -moz-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-	    -webkit-box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-	    box-shadow: 0 0 .65em .325em rgba( 0, 0, 0, .1 );
-	}
-
-	/* Image Offset for Indication of Linked Content */
-
-	#portfolio figure:hover {
-	    bottom: .26em;
-	}
-	
-	@media screen and (min-width: 45em) {
-	#container-header {
-		background: #352a38 url("img/bg-photo-l.jpg") no-repeat top center;
-	    padding:10% 0;
-		-webkit-background-size: cover;
-	    -moz-background-size: cover;
-	    background-size: cover;
-	}
-	}	
-	
-	@media screen and (max-width: 45em) {
-		#container-header {
-		    background: #352a38 url("img/bg-photo-s.jpg") no-repeat top center;
-			-webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    background-size: cover;
-			padding: 10% 0;
-		}
-	}	
+			<!--[if IE 8]>
+			<script src="./js/checkbox.js"></script>
+			<![endif]-->
 			
-	/* Headshot */
-
-	#maya {
-	    width: 25%;
-	    height: 0;
-	    padding-bottom: 25%;
-	    }
-    
-	#maya img {
-	    width: 100%;
-	    }			
+			<!--[if IE 6]>
+				<script src="./js/selectivizr-min.js"></script>
+			<![endif]-->
 			
-	</style>
 	</head>
 
 	<body lang="en">
 		<div id="container-nav">
-			<section id="nav" class="wrapper">
+			<section id="nav" class="group wrapper">
 				<h3>Maya Chopra</h3>
-				<!-- Turn off for now
-				<nav>
-					<ul>
-						<li>Portfolio</li>
-						<li>Resume</li>
-						<li>LinkedIn Profile</li>
-						<li>Contact</li>
-					</ul>
-				</nav>
-			-->
+		        <!-- Checkbox Hack markup -->
+		        <input type="checkbox" id="toggle" />
+		        <label for="toggle" onclick>Menu</label>
+		        <!-- /Checkbox Hack markup -->
+		        <nav>
+		            <ul>
+		                <li><a href="#portfolio">Portfolio</a></li>
+		                <li><a href="#resume">Resume</a></li>
+		                <li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
+		                <li><a href="#contact">Contact</a></li>
+		            </ul>
+		        </nav>
+				
+			
 			</section>
 		</div>
 		<div id="container-header">
 			<header id="masthead" class="wrapper">
 				<figure id="maya"> 
-				    <div data-picture data-alt=""Maya Chopra">
+				    <div data-picture data-alt="Maya Chopra">
 				        <div data-src="img/headshot-s.png"></div>
 				        <div data-src="img/headshot-m.png" data-media="(min-width: 45em)"></div>
 				        <div data-src="img/headshot-l.png" data-media="(min-width: 60em)"></div>
 				        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
 				        <noscript>
-				            <img src="./img/headshot-s.png" alt="Maya Chopra">
+				            <img src="img/headshot-s.png" alt="Maya Chopra">
 				        </noscript>
 				    </div>
 				</figure>
@@ -149,7 +91,7 @@
 					    <h4>Vitamin T Homepage</h4>
 					        <a href="/work/vitamin-t/">
 					            <figure>
-					                <img src="./img/vitamin-t.png">	
+					                <img src="./img/vitamin-t.png" alt="vitamin t homepage">	
 					            </figure>
 					        </a>
 					</article>
@@ -158,7 +100,7 @@
 				<h4>RoboHead iPad App</h4>
 						<a href="/work/robohead/">
 							<figure>
-								<img src="./img/robohead.png">
+								<img src="./img/robohead.png" alt="Robohead iPad App">
 							</figure>
 						</a>
 				</article>
@@ -166,7 +108,7 @@
 				<h4>Shareist Homepage</h4>
 						<a href="/work/shareist/">
 							<figure>
-								<img src="./img/shareist.png">
+								<img src="./img/shareist.png" alt="Shareist homepage">
 							</figure>
 						</a>
 				</article>
@@ -222,7 +164,7 @@
 			</article>
 		</div>
 		<div id="container-footer">
-			<form>
+			<form id="contact">
 			    <fieldset class="wrapper">
 			        <legend>Contact</legend>
 			            <ul class="group">
