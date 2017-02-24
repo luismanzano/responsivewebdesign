@@ -704,3 +704,73 @@ img {
 .group {
 	    *zoom: 1;
 	    }
+
+			/* Figures/Images */
+
+			.ie #portfolio figure {
+			    width: 100%;
+			    box-sizing: border-box;
+			    }
+
+			/* "*" hack applies only to IE7 and below */
+
+			.ie #portfolio figure {
+			    *width: auto;
+			    }
+
+			/* Navigation */
+
+			/* IE8 .checked class for checkbox.js */
+
+			#nav input[type=checkbox].checked ~ nav {
+			    height: auto;
+			    overflow: visible;
+			}
+
+			/* Always show nav, IE7 and below */
+
+			.ie #nav nav {
+			    *height: auto;
+			    *overflow: visible;
+			}
+
+			/* Hide navicon, IE7 and below */
+
+			.ie #nav label {
+			    *background: none;
+			    }
+
+			/* box-sizing polyfill, IE7 and below (The URL in .ie textarea is placeholder only. You will need to replace with path to your domain) */
+
+			.ie .wrapper,
+			.ie .name,
+			.ie .email,
+			.ie input,
+			.ie textarea {
+			    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
+			}
+
+
+			<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+			<![endif]-->
+
+			<!--[if IE 8]>
+			<script src="./js/checkbox.js"></script>
+			<![endif]-->
+
+			---------------------------
+			C. Attribute Selector Support for IE6
+			---------------------------
+
+			e.g.,
+
+			#nav input[type=checkbox] {
+			    position: absolute;
+			    top: -999em;
+			    left: -999em;
+			}
+
+			<!--[if IE 6]>
+			<script src="./js/selectivizr-min.js"></script>
+			<![endif]-->
